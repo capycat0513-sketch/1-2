@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1>구구단</h1>
+    <input type="text"id='gugudan'>
+    <button id="check">구구단</button>
+    <div id="print"></div>
+</body>
+
+</html>
+<script>
+    document.getElementById('check').onclick=function(){
+        const gugudan =document.getElementById('gugudan').value;//input태그 안에 있는 value(값)갖고오기
+        const div = document.getElementById('print');//div태그 가져오기
+
+        // input는 value 속성
+        // button은 onclick속성
+        //div,h1~h5는 textcontent,innerHTML 속성
+
+        let result='';
+        for(let i=1; i<10;i++){
+            result=result+`${gugudan}*${i}=${gugudan*i}`+'<br/>';
+        }
+        div.innerHTML=result;
+    }
+</script>
